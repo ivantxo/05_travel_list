@@ -1,6 +1,8 @@
 function Form() {
+  function handleSubmit() {}
+
   return (
-    <div className="add-form">
+    <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need for your 😍 trip?</h3>
       <select>
         {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
@@ -11,7 +13,7 @@ function Form() {
       </select>
       <input type="text" placeholder="Item..." />
       <button>Add</button>
-    </div>
+    </form>
   );
 }
 
